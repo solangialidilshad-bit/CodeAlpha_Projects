@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote App</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+      background-color: #f2f2f2;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Random Quote Generator</h1>
+  
+  <p id="quote">Click button to see quote</p>
+  
+  <button onclick="newQuote()">New Quote</button>
+
+  <script>
+    let quotes = [
+      "Success comes from hard work",
+      "Never give up",
+      "Believe in yourself",
+      "Stay positive and strong",
+      "Dream big and work hard"
+    ];
+
+    function newQuote() {
+      let random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[random];
+    }
+  </script>
+
+</body>
+</html>

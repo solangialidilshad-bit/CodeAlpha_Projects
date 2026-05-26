@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flashcard App</title>
+</head>
+<body>
+
+<h1>Flashcard App</h1>
+
+<p id="question"></p>
+<p id="answer" style="display:none;"></p>
+
+<button onclick="showAnswer()">Show Answer</button>
+<button onclick="nextCard()">Next</button>
+
+<script>
+let cards = [
+  {q: "Capital of Pakistan?", a: "Islamabad"},
+  {q: "5 + 3 = ?", a: "8"},
+  {q: "Color of grass?", a: "Green"}
+];
+
+let index = 0;
+
+function showAnswer() {
+  document.getElementById("answer").style.display = "block";
+}
+
+function nextCard() {
+  index = (index + 1) % cards.length;
+  document.getElementById("question").innerText = cards[index].q;
+  document.getElementById("answer").innerText = cards[index].a;
+  document.getElementById("answer").style.display = "none";
+}
+
+document.getElementById("question").innerText = cards[index].q;
+document.getElementById("answer").innerText = cards[index].a;
+</script>
+
+</body>
+</html>
