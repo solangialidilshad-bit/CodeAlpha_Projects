@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translator App</title>
+</head>
+<body>
+
+<h1>Simple Translator</h1>
+
+<input type="text" id="inputText" placeholder="Enter text">
+<br><br>
+
+<button onclick="translateText()">Translate</button>
+
+<p id="output"></p>
+
+<script>
+function translateText() {
+  let text = document.getElementById("inputText").value;
+
+  if(text == "hello"){
+    document.getElementById("output").innerText = "Assalamualaikum";
+  }
+  else if(text == "how are you"){
+    document.getElementById("output").innerText = "Aap kaise hain";
+  }
+  else{
+    document.getElementById("output").innerText = "Translation not found";
+  }
+}
+</script>
+
+</body>
+</html>
